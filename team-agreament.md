@@ -55,7 +55,7 @@ Discord, Slack and zoom meetings.
 #### How often will you take breaks?
 Each two hours.
 #### What is your plan if you start to fall behind?
-We Will Try our best to ask our TA’s for help  and work for extra hours.
+We Will Try our best to follow up by working for extra hours, then we may ask our TA’s for help.
 #### How will you communicate after hours and on the weekend?
 Slack and zoom meetings.
 #### What is your strategy for ensuring everyone’s voice is heard?
