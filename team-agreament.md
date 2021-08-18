@@ -14,7 +14,7 @@
 ## Cooperation Plan
 
 #### What are the key strengths of each person on the team?
-We have many strengths in our team for each person, like Ahmad is great in Communication skills. and this distinguishes him from us, Abdullah with his ideas and designing skills, Khaled for providing his help as much as possible, Ruba for her Good background in programming language, Finary, Leen for her hard work and contribution.
+We have many strengths in our team for each person, like Ahmad is great in Communication skills. and this distinguishes him from us, Abdullah with his ideas and designing skills, Khaled for providing his help as much as possible, Ruba for her Good background in programming language, Finally, Leen for her hard work and contribution.
 
 #### How can you best utilize these strengths in the execution of your project?
 When team members use their abilities and strengths in the right place, they will be creative and successful. 
@@ -34,7 +34,7 @@ It is common to have disagreements among team members, But it is important to kn
 
 #### What will your team do if one person is taking over the project and not letting the other members contribute?
 
-if one person is taking over the project and not letting the other members contribute, the team leader will discuss the problem with this person individually, after which the problem will be discussed with the team through a meeting.If some members do not participate, their negligence at work will be declared, and they will be given an additional opportunity, in the event that nothing changes, they will be required to change them to another person.
+if one person is taking over the project and not letting the other members contribute, the team leader will discuss the problem with this person individually, and tell her/him the importance of team works and that everyone of us can and should add his knowledge to the project. 
 
 #### How will you approach each other and the challenges of the project knowing that it is impossible for all members to be at the exact same place in understanding and skill level?
 
