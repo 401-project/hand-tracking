@@ -35,6 +35,13 @@ Our hand tracking software captures all the subtlety and complexity of natural h
 <br>
 <br>
 
+### The Value of the feature to the user :
+
+
+* Save the users time . 
+* The users still work in the same screen with out open new screens  .
+* Esay to used .
+
 ### Stretch goals:
 
 - Detect the shape of the user drawing and draw the matching shape automatically.
@@ -69,4 +76,9 @@ Our hand tracking software captures all the subtlety and complexity of natural h
 
 ## Domain Modeling
 
+
 ![Domain model](img/domain_model.jpeg)
+
+## PM tool link
+https://trello.com/invite/accept-board
+
