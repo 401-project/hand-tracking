@@ -18,7 +18,7 @@ while True:
     
     if results.multi_hand_landmarks:
         for hand_lms in results.multi_hand_landmarks:
-            mp_draw.draw_landmarks(img, hand_lms)
+            mp_draw.draw_landmarks(img, hand_lms , mp_hands.HAND_CONNECTIONS)
     
     
     cv2.imshow("Image",img)
