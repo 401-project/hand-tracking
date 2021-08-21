@@ -34,12 +34,13 @@ Our hand tracking software captures all the subtlety and complexity of natural h
 
 <br>
 <br>
+
 ### The Value of the feature to the user :
 
 
-* save the users time . 
-* the users still work in the same screen with out open new screens  .
-* esay to used .
+* Save the users time . 
+* The users still work in the same screen with out open new screens  .
+* Esay to used .
 
 ### Stretch goals:
 
@@ -75,5 +76,9 @@ Our hand tracking software captures all the subtlety and complexity of natural h
 
 ## Domain Modeling
 
+
+![Domain model](img/domain_model.jpeg)
+
 ## PM tool link
 https://trello.com/invite/accept-board
+
