@@ -77,7 +77,7 @@ Our hand tracking software captures all the subtlety and complexity of natural h
 ## Domain Modeling
 
 
-![Domain model](img/domain_model.jpeg)
+![Domain model](img/domain_model.png)
 
 <br>
 <br>
