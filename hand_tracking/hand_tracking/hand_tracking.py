@@ -25,6 +25,7 @@ class HandDetection:
 
             img_RBG= cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
             self.results= self.hands.process(img_RBG)
+
             
             if self.results.multi_hand_landmarks:
                 self.check_hand=True
@@ -79,6 +80,7 @@ def main():
     
 if __name__=="__main__":
     main()
+    #test
 
 
 
