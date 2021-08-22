@@ -83,5 +83,5 @@ Our hand tracking software captures all the subtlety and complexity of natural h
 <br>
 
 ## PM tool link
-https://trello.com/invite/accept-board
+https://trello.com/b/j5eG3CKU/easy-hand-paint-project
 
