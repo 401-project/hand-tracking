@@ -4,12 +4,21 @@ import time
 
 # from mediapipe.python.solutions import hands 
 
+
+
+
+class HandDetection:
+    def __init__(self,detection_mode=False,num_hand=2,detect_confidance=0.5,track_confedince=0.5):
+        self.detection_mode=detection_mode
+        self.num_hand=num_hand
+        self.detect_confidance=detect_confidance
+        self.track_confedince=track_confedince
+        self.mp_hands= mp.solutions.hands
+        self.hands=self.mp_hands.Hands(self.detection_mode,self.num_hand,self.detect_confidance,self.track_confedince)
+        self.mp_draw= mp.solutions.drawing_utils
+
+
 cap=cv2.VideoCapture(0)
-
-mp_hands= mp.solutions.hands
-hands=mp_hands.Hands()
-mp_draw= mp.solutions.drawing_utils
-
 p_time=0
 c_time=0
 while True:
