@@ -16,6 +16,8 @@ class HandDetection:
         self.mp_hands= mp.solutions.hands
         self.hands=self.mp_hands.Hands(self.detection_mode,self.num_hand,self.detect_confidance,self.track_confedince)
         self.mp_draw= mp.solutions.drawing_utils
+        self.check_hand=False
+
 
 
     def find_hand(self,img,draw=True):
@@ -24,6 +26,7 @@ class HandDetection:
             results= self.hands.process(img_RBG)
             
             if results.multi_hand_landmarks:
+                self.check_hand=True
                 for hand_lms in results.multi_hand_landmarks:
                     if draw:
                         self.mp_draw.draw_landmarks(img, hand_lms , self.mp_hands.HAND_CONNECTIONS)
