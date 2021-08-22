@@ -29,7 +29,26 @@ def find_hand(self,img,draw=True):
                     self.mp_draw.draw_landmarks(img, hand_lms , self.mp_hands.HAND_CONNECTIONS)
         
         return img
+        
+def position(self,img,hand_num=0,draw=True):
 
+        land_mark_position=[]
+
+        if self.results.multi_hand_landmarks:
+            my_hand= self.results.multi_hand_landmarks[hand_num]
+
+            for id,lm_position in enumerate(my_hand.landmark):
+                    # print(id,lm_position)
+
+                high,width,channel= img.shape
+                cx,cy= int(lm_position.x*width), int(lm_position.y*high)
+                # print(cx,cy)
+                land_mark_position.append([id,cx,cy])
+                
+
+                if draw:
+                    cv2.circle(img,(cx,cy),25,(255,255,255),cv2.FILLED)
+        return land_mark_position
 
                 
 
