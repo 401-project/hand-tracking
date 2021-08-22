@@ -9,3 +9,10 @@ def test_detection_hand():
     img = cv2.imread("hand_tracking/assest/hand.jpg")
     test.find_hand(img)
     assert test.check_hand    
+
+def test_target_position():
+    test=HandDetection()
+    img = cv2.imread("hand_tracking/assest/hand.jpg")
+    test.find_hand(img)
+    test.position(img)
+    assert test.check_position    
