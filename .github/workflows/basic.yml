@@ -38,6 +38,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest==5.2
         pip install opencv-python==4.5.3.56
+        pip install mediapipe==0.8.7
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
