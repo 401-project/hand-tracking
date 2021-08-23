@@ -14,15 +14,20 @@ x_previous,y_previous=0,0
 img_cover=np.zeros((720, 1280, 3),np.uint8)
 
 folder='hand_tracking/Header'
-list= os.listdir(folder)
+
 img_list=[]
-for path in list:
-    image= cv2.imread(f"{folder}/{path}")
-    img_list.append(image)
+image= cv2.imread(f"{folder}/{'1.png'}")
+img_list.append(image)
+image= cv2.imread(f"{folder}/{'2.png'}")
+img_list.append(image)
+image= cv2.imread(f"{folder}/{'3.png'}")
+img_list.append(image)
+image= cv2.imread(f"{folder}/{'4.png'}")
+img_list.append(image)
 
 header= img_list[0]
 color=(255,0,255)
-# print(list)
+print(img_list)
 
 cap= cv2.VideoCapture(0)
 cap.set(3,1280)
