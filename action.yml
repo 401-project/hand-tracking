@@ -62,8 +62,8 @@ inputs:
     default: OFF
     required: false
 runs:
-  using: 'python3'
-  main: 'hand_tracking/hand_tracking/hand_tracking.py'
+  using: 'node12'
+  main: ''
 
 # name: Python application
 
