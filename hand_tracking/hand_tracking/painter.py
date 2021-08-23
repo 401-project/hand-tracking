@@ -30,6 +30,10 @@ cap.set(4 ,720)
 
 hand_detect = HandDetection(detect_confidance=0.80)
 
+brush_weight=15
+erase_weight=80
+x_previous,y_previous=0,0  
+
 while True:
     success , img =cap.read()
     img= cv2.flip(img,1)
@@ -73,29 +77,25 @@ while True:
             cv2.circle(img,(x1,y1),15,color, cv2.FILLED)
 
             print("Drawing mode")
-
             if x_previous== 0 and y_previous==0:
                 x_previous,y_previous=x1,y1
-
 
             if color==(0,0,0):
               cv2.line(img, (x_previous,y_previous),(x1,y1),color,erase_weight)
               cv2.line(img_cover, (x_previous,y_previous),(x1,y1),color,erase_weight)
-              
-
             else:
               cv2.line(img, (x_previous,y_previous),(x1,y1),color,brush_weight)
               cv2.line(img_cover, (x_previous,y_previous),(x1,y1),color,brush_weight)
+            x_previous,y_previous=x1,y1
 
-            x_previous,y_previous=x1,y1 
 
-
-    gray_img=cv2.cvtColor(img_cover,cv2.COLOR_BGR2GRAY)  
-    _, inverse_img=cv2.threshold(gray_img,0,255,cv2.THRESH_BINARY_INV)  
+    gray_img=cv2.cvtColor(img_cover,cv2.COLOR_BGR2GRAY)
+    _, inverse_img=cv2.threshold(gray_img,0,255,cv2.THRESH_BINARY_INV)
     inverse_img=cv2.cvtColor(inverse_img,cv2.COLOR_GRAY2BGR)
     img=cv2.bitwise_and(img,inverse_img)
     img=cv2.bitwise_or(img,img_cover)
-      
+
+
     
     img[0:125 , 0:1280] = header
     cv2.imshow("Image",img)
