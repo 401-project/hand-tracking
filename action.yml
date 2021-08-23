@@ -1,101 +1,101 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: 'Setup OpenCV'
-description: 'This action downloads, compiles and installs OpenCV using the informed version.'
-branding:
-  icon: 'scissors'
-  color: 'gray-dark'
-inputs:
-  opencv-version:
-    description: 'OpenCV version to be installed.'
-    required: true
-    default: '4.0.0'
-  opencv-extra-modules:
-    description: 'If opencv-contrib (extra modules) should be included in the instalation.'
-    required: false
-    default: true
-  install-deps:
-    description: 'If dependencies should be installed as well.'
-    required: false
-    default: true
-  CMAKE_BUILD_TYPE:
-    required: false
-    default: RELEASE
-  CMAKE_CXX_COMPILER:
-    default: g++
-    required: false
-  CMAKE_INSTALL_PREFIX:
-    default: /usr/local
-    required: false
-  WITH_TBB:
-    default: ON
-    required: false
-  WITH_IPP:
-    default: ON
-    required: false
-  BUILD_NEW_PYTHON_SUPPORT:
-    default: OFF
-    required: false
-  WITH_V4L:
-    default: OFF
-    required: false
-  ENABLE_PRECOMPILED_HEADERS:
-    default: ON
-    required: false
-  INSTALL_C_EXAMPLES:
-    default: OFF
-    required: false
-  INSTALL_PYTHON_EXAMPLES:
-    default: OFF
-    required: false
-  BUILD_EXAMPLES:
-    default: OFF
-    required: false
-  WITH_QT:
-    default: OFF
-    required: false
-  WITH_OPENGL:
-    default: OFF
-    required: false
-  GENERATE_PKGCONFIG:
-    default: OFF
-    required: false
-runs:
-  using: 'node12'
-  main: ''
+# name: 'Setup OpenCV'
+# description: 'This action downloads, compiles and installs OpenCV using the informed version.'
+# branding:
+#   icon: 'scissors'
+#   color: 'gray-dark'
+# inputs:
+#   opencv-version:
+#     description: 'OpenCV version to be installed.'
+#     required: true
+#     default: '4.0.0'
+#   opencv-extra-modules:
+#     description: 'If opencv-contrib (extra modules) should be included in the instalation.'
+#     required: false
+#     default: true
+#   install-deps:
+#     description: 'If dependencies should be installed as well.'
+#     required: false
+#     default: true
+#   CMAKE_BUILD_TYPE:
+#     required: false
+#     default: RELEASE
+#   CMAKE_CXX_COMPILER:
+#     default: g++
+#     required: false
+#   CMAKE_INSTALL_PREFIX:
+#     default: /usr/local
+#     required: false
+#   WITH_TBB:
+#     default: ON
+#     required: false
+#   WITH_IPP:
+#     default: ON
+#     required: false
+#   BUILD_NEW_PYTHON_SUPPORT:
+#     default: OFF
+#     required: false
+#   WITH_V4L:
+#     default: OFF
+#     required: false
+#   ENABLE_PRECOMPILED_HEADERS:
+#     default: ON
+#     required: false
+#   INSTALL_C_EXAMPLES:
+#     default: OFF
+#     required: false
+#   INSTALL_PYTHON_EXAMPLES:
+#     default: OFF
+#     required: false
+#   BUILD_EXAMPLES:
+#     default: OFF
+#     required: false
+#   WITH_QT:
+#     default: OFF
+#     required: false
+#   WITH_OPENGL:
+#     default: OFF
+#     required: false
+#   GENERATE_PKGCONFIG:
+#     default: OFF
+#     required: false
+# runs:
+#   using: 'node12'
+#   main: ''
 
-# name: Python application
+name: Python application
 
-# on:
-#   push:
-#     branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-# jobs:
-#   build:
+jobs:
+  build:
 
-#     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-#     steps:
-#     - uses: actions/checkout@v2
-#     - name: Set up Python 3.9
-#       uses: actions/setup-python@v2
-#       with:
-#         python-version: 3.9
-#     - name: Install dependencies
-#       run: |
-#         python -m pip install --upgrade pip
-#         pip install flake8 pytest
-#         poetry add opencv-python
-#         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-#     - name: Lint with flake8
-#       run: |
-#         # stop the build if there are Python syntax errors or undefined names
-#         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-#         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-#         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-#     - name: Test with pytest
-#       run: |
-#         pytest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        poetry add opencv-python
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Test with pytest
+      run: |
+        pytest
