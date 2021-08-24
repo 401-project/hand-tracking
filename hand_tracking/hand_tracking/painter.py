@@ -1,13 +1,7 @@
-
 from typing import overload
 from hand_tracking import *
 import cv2 
 import numpy as np
-
-
-
-
-
 
 
 folder='hand_tracking/Header'
@@ -58,52 +52,60 @@ class Draw:
                 # print(fingres)
 
                 if fingres[1] and fingres[2]:
-                    x_previous,y_previous=0,0
-                    print("select mode")
-                    if y1<125:
-                        if 250<x1<450:
-                            header=img_list[0]
-                            color=(255,0,255)
-                        elif 550<x1<750:
-                            header=img_list[1]
-                            color=(255,0,0)
-                        elif 800<x1<950:
-                            header=img_list[2]
-                            color=(0,255,0)
-                        elif 1050<x1<1200 :
-                            header=img_list[3]
-                            color=(0,0,0)
-                            
-                    cv2.rectangle(img,(x1,y1-21),(x2,y2+21),color, cv2.FILLED)
-
-
-
-
+                   self.select_mode(img)
                 if fingres[1] and fingres[2]==False:
-                    cv2.circle(img,(x1,y1),15,color, cv2.FILLED)
-
-                    print("Drawing mode")
-                    if x_previous== 0 and y_previous==0:
-                        x_previous,y_previous=x1,y1
-
-                    if color==(0,0,0):
-                     cv2.line(img, (x_previous,y_previous),(x1,y1),color,erase_weight)
-                     cv2.line(img_cover, (x_previous,y_previous),(x1,y1),color,erase_weight)
-                    else:
-                     cv2.line(img, (x_previous,y_previous),(x1,y1),color,brush_weight)
-                     cv2.line(img_cover, (x_previous,y_previous),(x1,y1),color,brush_weight)
-                    x_previous,y_previous=x1,y1
+                    self.draw_mode(img)     
 
 
-            gray_img=cv2.cvtColor(img_cover,cv2.COLOR_BGR2GRAY)
-            _, inverse_img=cv2.threshold(gray_img,0,255,cv2.THRESH_BINARY_INV)
-            inverse_img=cv2.cvtColor(inverse_img,cv2.COLOR_GRAY2BGR)
-            img=cv2.bitwise_and(img,inverse_img)
-            img=cv2.bitwise_or(img,img_cover)
+            self.gray_img=cv2.cvtColor(self.img_cover,cv2.COLOR_BGR2GRAY)
+            _, self.inverse_img=cv2.threshold(self.gray_img,0,255,cv2.THRESH_BINARY_INV)
+            self.inverse_img=cv2.cvtColor(self.inverse_img,cv2.COLOR_GRAY2BGR)
+            img=cv2.bitwise_and(img,self.inverse_img)
+            img=cv2.bitwise_or(img,self.img_cover)
 
-
-    
-            img[0:125 , 0:1280] = header
+            img[0:125 , 0:1280] = self.header
             cv2.imshow("Image",img)
             if cv2.waitKey(1) & 0xff==ord("q"):
                 break
+    def select_mode(self,img):
+        self.x_previous,self.y_previous=0,0
+        print("select mode")
+        
+        if self.y1<125:
+            if 250<self.x1<450:
+                self.header=img_list[0]
+                self.color=(255,0,255)
+            elif 550<self.x1<750:
+                self.header=img_list[1]
+                self.color=(255,0,0)
+            elif 800<self.x1<950:
+                self.header=img_list[2]
+                self.color=(0,255,0)
+            elif 1050<self.x1<1200 :
+                self.header=img_list[3]
+                self.color=(0,0,0)
+                
+        cv2.rectangle(img,(self.x1,self.y1-21),(self.x2,self.y2+21),self.color, cv2.FILLED)
+
+
+    def draw_mode(self,img):
+        cv2.circle(img,(self.x1,self.y1),15,self.color, cv2.FILLED)
+
+        print("Drawing mode")
+        if self.x_previous== 0 and self.y_previous==0:
+            self.x_previous,self.y_previous=self.x1,self.y1
+
+        if self.color==(0,0,0):
+            print(self.x_previous,"test",self.y_previous)
+            cv2.line(img, (self.x_previous,self.y_previous),(self.x1,self.y1),self.color,self.erase_weight)
+            cv2.line(self.img_cover, (self.x_previous,self.y_previous),(self.x1,self.y1),self.color,self.erase_weight)        
+        else:
+            print(self.x_previous,"test",self.y_previous)
+            cv2.line(img, (self.x_previous,self.y_previous),(self.x1,self.y1),self.color,self.brush_weight)
+            cv2.line(self.img_cover, (self.x_previous,self.y_previous),(self.x1,self.y1),self.color,self.brush_weight)
+        self.x_previous,self.y_previous=self.x1,self.y1
+    
+    
+if __name__=="__main__":
+    draw=Draw(img_list)
+    draw.main()
