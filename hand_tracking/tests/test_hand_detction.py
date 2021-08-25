@@ -1,5 +1,6 @@
 import cv2
 from hand_tracking.hand_tracking.hand_tracking import *
+
 def test_camera_working():
     cap=cv2.VideoCapture(0)
     assert cap
@@ -16,3 +17,4 @@ def test_target_position():
     test.find_hand(img)
     test.position(img)
     assert test.check_position    
+ 

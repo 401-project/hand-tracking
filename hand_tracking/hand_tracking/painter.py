@@ -67,6 +67,8 @@ class Draw:
             cv2.imshow("Image",img)
             if cv2.waitKey(1) & 0xff==ord("q"):
                 break
+        
+              
     def select_mode(self,img):
         self.x_previous,self.y_previous=0,0
         print("select mode")

@@ -19,6 +19,8 @@ class HandDetection:
         self.check_hand=False
         self.check_position=False
         self.tip_id=[4,8,12,16,20]
+        self.select=False
+        self.draw=False
  
 
 
@@ -72,6 +74,17 @@ class HandDetection:
                 fingers.append(1)
             else: 
                 fingers.append(0)
+                
+        if fingers== [0,1,1,0,0]:
+            self.select=True
+            self.draw=False 
+        elif fingers== [0,1,0,0,0]:
+            self.select=False
+            self.draw=True
+        else:
+            self.select=False
+            self.draw=False           
+                
         return fingers
 
 
