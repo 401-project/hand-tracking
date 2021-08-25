@@ -80,3 +80,27 @@ def test_select_mode():
     assert test.select 
 
 
+def test_not_select_mode():
+    test=HandDetection()
+    img = cv2.imread("hand_tracking/hand_tracking/assest/one_finger_up.png")
+    test.find_hand(img)
+    test.position(img)
+    test.find_finger_up()
+    assert test.select == False
+   
+def test_draw_mode():
+    test=HandDetection()
+    img = cv2.imread("hand_tracking/hand_tracking/assest/one_finger_up.png")
+    test.find_hand(img)
+    test.position(img)
+    test.find_finger_up()
+    assert test.draw 
+    
+     
+def test_not_draw_mode():
+    test=HandDetection()
+    img = cv2.imread("hand_tracking/hand_tracking/assest/two_fingers.png")
+    test.find_hand(img)
+    test.position(img)
+    test.find_finger_up()
+    assert test.draw == False
