@@ -23,9 +23,9 @@ class Draw:
         self.header= img_list[0]
         self.color=(255,0,255)
         self.cap= cv2.VideoCapture(0)
-        self.cap.set(3,1280)
-        self.cap.set(4 ,720)
-        self.hand_detect = HandDetection(detect_confidance=0.80)
+        # self.cap.set(3,1280)
+        # self.cap.set(4 ,720)
+        self.hand_detect = HandDetection(detect_confidance=0.5)
         self.brush_weight=15
         self.erase_weight=80
         self.x_previous,self.y_previous=0,0  
@@ -40,6 +40,7 @@ class Draw:
         while True:
             success , img =self.cap.read()
             img= cv2.flip(img,1)
+            img=cv2.resize(img,[1280,720])
             img= self.hand_detect.find_hand(img)
             lm_postion= self.hand_detect.position(img,draw=False)
             

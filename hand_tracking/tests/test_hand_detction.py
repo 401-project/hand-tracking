@@ -59,3 +59,24 @@ def test_two_fingers_up():
     actual =test.find_finger_up()
     expected = [0, 1, 1, 0, 0]
     assert actual == expected   
+
+
+
+def test_no_fingers_up():
+    test=HandDetection()
+    img = cv2.imread("hand_tracking/hand_tracking/assest/close_hand.png")
+    test.find_hand(img)
+    test.position(img)
+    actual =test.find_finger_up()
+    expected = [0, 0, 0, 0, 0]
+    assert actual == expected  
+    
+def test_select_mode():
+    test=HandDetection()
+    img = cv2.imread("hand_tracking/hand_tracking/assest/two_fingers.png")
+    test.find_hand(img)
+    test.position(img)
+    test.find_finger_up()
+    assert test.select 
+
+
