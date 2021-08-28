@@ -63,7 +63,7 @@ Our hand tracking software captures all the subtlety and complexity of natural h
 
 ### Wireframe
 
-https://www.figma.com/file/2m4z8b77eumBp3QrjcQi2J/Untitled?node-id=0%3A3
+![Wireframe](img/wireframe.png)
 
 
 <br>
