@@ -1,3 +1,4 @@
+from hand_tracking.hand_tracking.hand_tracking import HandDetection
 from typing import overload
 from hand_tracking import *
 import cv2 
