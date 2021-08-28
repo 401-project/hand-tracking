@@ -54,7 +54,7 @@ Our hand tracking software captures all the subtlety and complexity of natural h
 <br>
 
 ### Acceptance Tests
-- Ensure that the user can open the camera.
+- Ensure that the user can open the camera .
 - Ensure that the hand is detected.
 - Ensure that the user can draw on the screen.
 
