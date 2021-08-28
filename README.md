@@ -80,3 +80,12 @@ Our hand tracking software captures all the subtlety and complexity of natural h
 ## PM tool link
 https://trello.com/b/j5eG3CKU/easy-hand-paint-project
 
+
+
+
+### Run the application:
+1. Clone the repository to your pc.
+2. Cd to hand-tracking directory.
+3. Use this command to run the application: 
+  * python3 -m hand_tracking.hand_tracking.painter
+4. Press 'q' to Exit.
