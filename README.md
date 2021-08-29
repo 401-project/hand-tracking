@@ -10,7 +10,7 @@
 <br>
 <br>
 
-## Overview
+## Overview:
 Our hand tracking software captures all the subtlety and complexity of natural hand movements. It's based on a decade of development and iteration, generations of research in artificial intelligence. We will provide a tool for the user to draw directly on the screen by his/her hand, which will save a lot of time instead of using the mouse to draw.
 
 <br>
