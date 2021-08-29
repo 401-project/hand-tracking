@@ -60,7 +60,7 @@ Our hand tracking software captures all the subtlety and complexity of natural h
 
 <br>
 <br>
-
+<br>
 ### Wireframe
 ---
 ![Wireframe](img/wireframe.png)
