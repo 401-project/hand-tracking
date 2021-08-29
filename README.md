@@ -2,7 +2,7 @@
 
 ### Team Member:
 - Ruba Kanaan.
-- Leen Hazaimeh
+- Leen Hazaimeh.
 - Ahmad Abu Dames
 - Khaled Al-Shishani
 - Abdullah Elian
