@@ -5,7 +5,7 @@
 - Leen Hazaimeh
 - Ahmad Abu Dames
 - Khaled Al-Shishani
-- Abdullah Elian.
+- Abdullah Elian
 
 <br>
 <br>
