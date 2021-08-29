@@ -16,7 +16,7 @@ Our hand tracking software captures all the subtlety and complexity of natural h
 <br>
 <br>
 
-### User stories
+### User stories:
 
 * As a user, I want to draw without using the mouse.
 * As a user, I want to an easy app to draw on it.
