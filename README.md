@@ -85,7 +85,9 @@ https://trello.com/b/j5eG3CKU/easy-hand-paint-project
 
 ### Run the application:
 1. Clone the repository to your pc.
-2. Cd to hand-tracking directory.
-3. Use this command to run the application: 
-  * python3 -m hand_tracking.hand_tracking.painter
-4. Press 'q' to Exit.
+2. Use these commands in your terminal:
+ * cd hand-tracking
+ * pip3 install opencv-python
+ * pip3 install mediapipe
+ * python3 -m hand_tracking.hand_tracking.painter
+5. Press 'q' to Exit.
