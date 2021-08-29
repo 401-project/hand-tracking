@@ -4,7 +4,7 @@
 - Ruba Kanaan.
 - Leen Hazaimeh.
 - Ahmad Abu Dames.
-- Khaled Al-Shishani
+- Khaled Al-Shishani.
 - Abdullah Elian
 
 <br>
