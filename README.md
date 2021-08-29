@@ -1,7 +1,7 @@
 # Easy Hand Paint.
 
 ### Team Member:
-- Ruba Kanaan
+- Ruba Kanaan.
 - Leen Hazaimeh
 - Ahmad Abu Dames
 - Khaled Al-Shishani
